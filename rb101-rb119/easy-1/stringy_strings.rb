@@ -1,19 +1,11 @@
 def stringy(num)
-  arr = []
-  new_arr = []
+  arr =[]
   
-  num.times do
-    arr << num
-    num -= 1
+  num.times do |index|
+    number = index.even? ? 1 : 0
+    arr << number
   end
-  
-  arr.each do |x|
-    x.odd? ? x = 0 : x = 1
-    new_arr << x
-  end
-  
-  new_arr.join
-  
+  arr.join
 end
 
 puts stringy(6) == '101010'

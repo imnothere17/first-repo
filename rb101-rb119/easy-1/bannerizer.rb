@@ -1,34 +1,15 @@
 def print_in_box(string)
-  dash = string.length + 2
+  width = string.length + 2
+  stars = "+#{'-' * width}+"
+  empty_box = "|#{' ' * width}|"
   
-  print '+'
-  dash.times do
-    print '-'
-  end
-  puts '+'
+  puts stars
+  puts empty_box
+  puts "| #{string} |"
+  puts empty_box
+  puts stars
   
-  print '|'
-  dash.times do
-    print ' '
-  end 
-  puts '|'
-  
-  print '| '
-  print string
-  puts ' |'
-  
-  print '|'
-  dash.times do
-    print ' '
-  end 
-  puts '|'
-  
-  print '+'
-  dash.times do
-    print '-'
-  end
-  puts '+'
 end
 
 print_in_box('To boldly go where no one has gone before.')
-print_in_box('')
+print_in_box(' ')
