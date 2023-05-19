@@ -1,15 +1,11 @@
 def center_of(string)
-  center = string.size / 2
+  center = string.length / 2
   
-  if string.size.odd?
-    string[center]
-  else
-    string[center - 1, 2]
-  end
+  string.length % 2 == 0 ? (string[center - 1, 2]) : (string[center])
 end
 
-center_of('I love ruby') == 'e'
-center_of('Launch School') == ' '
-center_of('Launch') == 'un'
-center_of('Launchschool') == 'hs'
-center_of('x') == 'x'
+puts center_of('I love ruby')
+puts center_of('Launch School')
+puts center_of('Launch')
+puts center_of('Launchschool')
+puts center_of('x')
